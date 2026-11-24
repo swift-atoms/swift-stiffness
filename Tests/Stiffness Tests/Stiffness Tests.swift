@@ -25,4 +25,15 @@ extension `Stiffness Tests` {
             #expect(stiffness * Space.Physical.metres(2.0) == Force.newtons(6.0))
         }
     }
+
+    @Suite struct `Cubic stiffness is a force per cube of a length` {
+        @Test func `Its dimension balances`() {
+            let length = Measure<1, Space.Physical>.dimension
+            #expect(Stiffness.Cubic.dimension == Force.dimension / (length * length * length))
+        }
+
+        @Test func `An amount given in newtons per cubic metre keeps its scalar`() {
+            #expect(Stiffness.Cubic.amount(2.5).underlying == 2.5)
+        }
+    }
 }

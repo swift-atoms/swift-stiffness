@@ -8,3 +8,4 @@ Use this package when a value is stiffness: how much force a spring needs per le
 - Its dimension is mass: 1, time: -2 (exponents of the base dimensions).
 - Amounts of stiffness add, scale and compare as swift-quantity gives every kind; they never mix with another kind, even one of the same dimension.
 - A force over a length is a stiffness, and a stiffness times a length is a force.
+- `Stiffness.Cubic` is cubic stiffness: the k₃ of a spring whose force grows as k₃ x³, as a drumhead's does when it stretches as it moves, in newtons per cubic metre, of dimension length: -2, mass: 1, time: -2. It has no operator of its own.
